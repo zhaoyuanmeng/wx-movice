@@ -1,0 +1,20 @@
+/* pages/movice/movice-tem/movice-tem.wxss */
+/* 引入星星模板的样式 */
+@import "../stars-tem/stars-tem.wxss";
+
+.movice-container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 22rpx;
+}
+
+.movice-img{
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movice-name{
+  margin-bottom: 16rpx;
+  font-size: 24rpx;
+}

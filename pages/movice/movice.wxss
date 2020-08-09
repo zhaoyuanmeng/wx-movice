@@ -1,0 +1,44 @@
+/* pages/movice/movice.wxss */
+/* 引入movice-list-tem的样式 */
+@import "movice-list-tem/movice-list-tem.wxss";
+@import 'movice-grid-tem/movice-grid-tem.wxss';
+.movice{
+  background-color:#666;
+}
+.movice-item{
+  padding: 0rpx 0 30rpx 0;
+}
+.search{
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.search-img{
+  margin: auto 0 auto 20rpx;
+}
+
+.placeholder{
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 20rpx;
+}
+
+.search input{
+  height: 100%;
+  width: 600rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.search-show{
+  position: absolute;
+  top: 80rpx;
+}
+
+.close-img{
+  width: 30rpx;
+  height: 30rpx;
+  margin:  auto 0 auto 10rpx;
+}

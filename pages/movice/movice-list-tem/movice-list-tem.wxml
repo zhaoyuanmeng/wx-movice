@@ -1,0 +1,19 @@
+<import src="../movice-tem/movice-tem.wxml" />
+<template name="moviceListTem">
+  <view class="movice-list-container">
+    <view class="movice-header">
+      <text class="movice-title">{{categoryTitle}}</text>
+      <view class="more">
+        <!-- 这个事件监听只能写在movice.js中 -->
+        <text class="more-text" catch:tap="onMoreTap" data-category="{{categoryTitle}}">更多</text>
+        <image src="/images/icon/arrow-right.png" class="more-img"></image>
+      </view>
+    </view>
+    <view class="movice-con">
+      <block wx:for="{{movices}}" wx:for-item = "movie">
+      <!-- 依次往下传值 传递值是自上往下绑定在传递 因为是最上面获取到的总数据 依次往下分发 -->
+        <template is="moviceTem" data="{{...movie}}"></template>
+      </block>
+    </view>
+  </view>
+</template>

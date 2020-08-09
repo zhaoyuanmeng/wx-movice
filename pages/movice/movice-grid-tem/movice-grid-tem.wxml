@@ -1,0 +1,14 @@
+<!-- 直接把之前的movice-tem引入过来 -->
+<import src="../movice-tem/movice-tem.wxml" />
+
+<template name="movice-gird">
+  <scroll-view scroll-x="false" scroll-y="true"  bindscrolltolower="onScrollLower" bindrefresherrefresh="pull"  bindrefresherrestore="store" class="gird-container" refresher-enabled="{{true}}" >
+    <block wx:for="{{movices}}" wx:for-item="movice">
+      <!-- 在template上面加样式没用 -->
+      <view class="gird-item">
+        <template is="moviceTem" data="{{...movice}}"></template>
+      </view>
+    </block>
+
+  </scroll-view>
+</template>

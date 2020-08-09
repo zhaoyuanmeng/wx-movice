@@ -1,0 +1,40 @@
+/* 引入movice模板的样式 */
+@import "../movice-tem/movice-tem.wxss";
+
+.movice-list-container{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.movice-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.movice-title{
+  color: rgb(39, 35, 35);
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.more{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 24rpx;
+}
+.more-text{
+  color: #666;
+  font-size: 24rpx;
+}
+.more-img{
+  width: 9rpx;
+  height: 16rpx;
+}
+.movice-con{
+  display: flex;
+  justify-content: space-between;
+}
+

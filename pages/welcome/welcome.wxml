@@ -1,0 +1,14 @@
+<!-- wxml是用来写页面骨架的文件 -->
+<!-- view相当于div 作用是容器 分隔文档 -->
+<view class="container" >
+  <!-- imgage用来显示图片 -->
+  <!-- 默认是300px 225px -->
+  <!-- 单位问题 rpx和px区别 -->
+  <image src="/images/avatar/1.png" class="user-avatar"></image>
+  <!-- 文本标签 会解析\n-->
+  <text class="user-name">Hello，赵元达</text>
+  <!-- 模拟按钮 -->
+  <view class="user-btn"bind:tap="onContainerTap">
+    <text catch:tap="onTap" >开启小程序之旅</text>
+  </view>
+</view>

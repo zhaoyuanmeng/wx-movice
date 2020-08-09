@@ -1,0 +1,11 @@
+<!--pages/movice/movice-tem/movice-tem.wxml-->
+<import src = "../stars-tem/stars-tem.wxml" />
+<template name="moviceTem">
+  <view class="movice-container" >
+    <image src="{{coverageUrl}}" class="movice-img" data-searchid="{{movieId}}" catchtap="onTapImg"></image>
+    <text class="movice-name">{{title}}</text>
+    <!-- 传进什么就是啥 变量名都一样 -->
+    <template is="starsTem" data="{{stars:stars,score:average}}"></template>
+  </view>
+
+</template>

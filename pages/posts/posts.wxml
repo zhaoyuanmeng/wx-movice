@@ -1,0 +1,26 @@
+<!-- 引入模板文件的入口 -->
+<import src="post-item/post-tpl.wxml"/>
+<view>
+<!-- swiper轮播图组件 -->
+<!-- 宽高只能设置在 swiper上面 siwper-item上面无效-->
+<!-- 这些属性都是通过看文档来实现需求 -->
+  <swiper indicator-dots="true" autoplay="true" interval="5000">
+    <swiper-item><image src="/images/wx.png" ></image></swiper-item>
+    <swiper-item><image src="/images/iqiyi.png"></image></swiper-item>
+    <swiper-item><image src="/images/vr.png"></image></swiper-item>
+  </swiper>
+  <!-- 列表区域 -->
+  <!-- for放在block标签上 -->
+  <block wx:for="{{post_key}}" wx:for-item="item" wx:for-index="idx" wx:key = "idx">
+  <view class="list">
+    <!--data- 自定义属性  -->
+    <view catch:tap="onTap" data-postid="{{item.postId}}">
+      <!--引入template   is引入的是postItem  data传入的是for里面的item  ...是展开符-->
+      <!-- 不能在template上面加事件 因为他就是一个占位符 根本找不到他 -->
+      <template is="postItem" data="{{...item}}" ></template>
+    </view>
+   
+  </view>
+ 
+  </block>
+</view>

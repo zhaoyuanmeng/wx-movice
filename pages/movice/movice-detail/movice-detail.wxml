@@ -1,0 +1,4 @@
+<!--pages/movice/movice-detail/movice-detail.wxml-->
+<view class="container">
+  <image class="head-img" src="{{movice.movieImg}}" mode="aspectFill"></image>
+</view>

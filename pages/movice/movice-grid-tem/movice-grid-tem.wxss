@@ -1,0 +1,10 @@
+@import "../movice-tem/movice-tem.wxss";
+.gird-item{
+ float: left;
+ margin: 20rpx auto 20rpx;
+ margin-left: 5rpx;
+}
+.gird-container{
+  /* 一定要给个高度 */
+  height: 1300rpx;
+}

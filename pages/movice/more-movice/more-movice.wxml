@@ -1,0 +1,5 @@
+<!--pages/movice/more-movice/more-movice.wxml-->
+<import src="../movice-grid-tem/movice-grid-tem.wxml" />
+<template is="movice-gird" data="{{movices}}">
+
+</template>

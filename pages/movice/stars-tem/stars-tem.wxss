@@ -1,0 +1,21 @@
+.stars-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.xingxing{
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+}
+.xingxing image{
+  height: 17rpx;
+  width: 17rpx;
+  margin-left: 3rpx;
+
+}
+.score{
+  color: rgb(153, 131, 131);
+}

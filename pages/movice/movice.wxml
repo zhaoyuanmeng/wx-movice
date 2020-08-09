@@ -1,0 +1,28 @@
+<!--pages/movice/movice.wxml-->
+<import src="./movice-list-tem/movice-list-tem.wxml" />
+<import src="./movice-grid-tem/movice-grid-tem.wxml" />
+<!-- 搜索框 -->
+<view class="search" >
+  <icon type="search" class="search-img"></icon>
+  <input type="text" placeholder="你的名字、河神" placeholder-class="placeholder" value="{{search}}" bindfocus="onBindFocus" bindblur="onBindblur" bindchange="onBindChange"></input>
+  <image bindtap="close" src="/images/icon/xx.png" class="close-img" wx:if="{{searchShow}}"></image>
+<!-- 没有搜索时加载的全部数据 -->
+</view>
+<view class="movice" wx:if="{{moviceShow}}">
+  <view class="movice-item">
+    <!-- 依次往下传值 传递值是自上往下绑定在传递 因为是最上面获取到的总数据 依次往下分发 -->
+    <!-- 为了解决movice-list-tem的数据绑定名字的统一化 所以在他们里面设置一个相同的属性名存放不同的数据 -->
+    <template is="moviceListTem" data="{{...top250}}"></template>
+  </view>
+  <view class="movice-item">
+    <template is="moviceListTem" data="{{...inTheaters}}"></template>
+  </view>
+  <view>
+    <template is="moviceListTem" data="{{...comingSoon}}"></template>
+  </view>
+</view>
+
+<!-- 搜索完以后展示的数据 -->
+<view class="search-show" wx:if="{{searchShow}}">
+  <template is="movice-gird" data="{{...searchData}}"></template>
+</view>
